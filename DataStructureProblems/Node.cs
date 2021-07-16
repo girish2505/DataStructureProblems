@@ -13,6 +13,7 @@ namespace DataStructureProblems
         {
             this.data = data;
             next = null;
+            idata = Convert.ToInt32(data);
         }
     }
 }

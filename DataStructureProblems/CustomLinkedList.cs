@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DataStructureProblems
 {
-    public class CustomLinkedList<T>
+    public class CustomLinkedList<T> where T : IComparable
     {
         public Node<T> head;
 
@@ -35,7 +35,7 @@ namespace DataStructureProblems
             {
                 if (temp.next.data.Equals(data))
                 {
-                    Console.WriteLine($"\nDelete data: {temp.next.data}");
+                    Console.WriteLine("\nDelete data: {0}", temp.next.data);
                     temp.next = temp.next.next;
                     break;
                 }
@@ -45,6 +45,38 @@ namespace DataStructureProblems
                 }
             }
         }
+        public void Sort(T data)
+        {
+            Node<T> newNode = new Node<T>(data);
+            Node<T> temp = head;
+            if (head == null || newNode.idata <= head.idata)
+            {
+                newNode.next = head;
+                head = newNode;
+            }
+            else if (head.next == null && head.idata < newNode.idata)
+            {
+                head.next = newNode;
+            }
+            else
+            {
+                if (temp.next.idata > newNode.idata)
+                {
+                    newNode.next = temp.next;
+                    temp.next = newNode;
+                }
+                else
+                {
+                    while (temp.next != null && temp.next.idata < newNode.idata)
+                    {
+                        temp = temp.next;
+                    }
+                    newNode.next = temp.next;
+                    temp.next = newNode;
+                }
+            }
+        }
+
         public string ReturnString()
         {
             string strText = "";
@@ -63,7 +95,7 @@ namespace DataStructureProblems
             }
             else
             {
-                Console.WriteLine("Empty");
+                Console.WriteLine("Empty!!!");
                 return default;
             }
         }
