@@ -21,8 +21,8 @@ namespace DataStructureProblems
             }
             for (int i = 0; i < textArray.Length; i++)
             {
-                Console.WriteLine(arr[i] + " ");
-                //Console.WriteLine("\n");
+                Console.Write(arr[i] + " ");
+                Console.WriteLine("\n");
             }
             for (int i = 0; i < textArray.Length; i++)
             {
