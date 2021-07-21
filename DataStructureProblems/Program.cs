@@ -10,6 +10,7 @@ namespace DataStructureProblems
             Console.WriteLine("1.Unordered List");
             Console.WriteLine("2.Ordered List");
             Console.WriteLine("3.Balanced Parentheses");
+            Console.WriteLine("4.Banking Csah Counter");
             Console.WriteLine("enter your option :");
             int option = Convert.ToInt32(Console.ReadLine());
 
@@ -33,6 +34,10 @@ namespace DataStructureProblems
                     {
                         Console.WriteLine("Parentheses is UnBalanced");
                     }
+                    break;
+                case 4:
+                    BankingCashCounter bankingCashCounter = new BankingCashCounter();
+                    bankingCashCounter.Queue();
                     break;
                 default:
                     break;

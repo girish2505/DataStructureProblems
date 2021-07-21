@@ -47,7 +47,6 @@ namespace DataStructureProblems
                 else
                     return false;
             }
-            //Balance method to perform push and pop operation for opening and closing parantheses
             public bool Isbalanced(char[] exp)
             {
                 item = new char[exp.Length];
