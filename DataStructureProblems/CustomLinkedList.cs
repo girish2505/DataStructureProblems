@@ -136,6 +136,20 @@ namespace DataStructureProblems
                 return 0;
             }
         }
+        public string Palindrome()
+        {
+            string reverseString = "";
+            while (this.head != null)
+            {
+                if (this.head == null)
+                {
+                    Console.WriteLine("Queue is empty");
+                }
+                reverseString = this.head.data + reverseString;
+                head = head.next;
+            }
+            return reverseString;
+        }
         public void Display()
         {
             Node<T> temp = this.head;

@@ -11,6 +11,7 @@ namespace DataStructureProblems
             Console.WriteLine("2.Ordered List");
             Console.WriteLine("3.Balanced Parentheses");
             Console.WriteLine("4.Banking Csah Counter");
+            Console.WriteLine("5.Palindrome Checker");
             Console.WriteLine("enter your option :");
             int option = Convert.ToInt32(Console.ReadLine());
 
@@ -38,6 +39,10 @@ namespace DataStructureProblems
                 case 4:
                     BankingCashCounter bankingCashCounter = new BankingCashCounter();
                     bankingCashCounter.Queue();
+                    break;
+                case 5:
+                    PalindromeChecker palindrome = new PalindromeChecker();
+                    palindrome.CheckPalindrome();
                     break;
                 default:
                     break;
